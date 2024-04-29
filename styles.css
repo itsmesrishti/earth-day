@@ -1,0 +1,509 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL */
+html {
+  font-size: 1rem;
+}
+
+body {
+  height: max-content;
+  overflow-y: hidden;
+}
+.mob {
+  display: none;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  font-size: 9rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-family: "Londrina Solid", sans-serif;
+  color: #f4c035;
+  max-width: 1300px;
+}
+
+.link-char {
+  text-decoration: none;
+  color: #f4c035;
+  font-size: 9rem;
+  font-family: "Londrina Solid", sans-serif;
+}
+
+.earth {
+  color: #12a0a6;
+}
+.earth:nth-child(even) {
+  color: #62b566;
+}
+
+.visited-link,
+.link-char:hover {
+  color: white;
+  font-family: "Rubik Moonrocks", sans-serif;
+}
+
+p,
+ul,
+a {
+  font-family: "Fraunces", serif;
+  font-size: 1.25rem;
+  line-height: 1.9rem;
+  /* max-width: 500px; */
+  max-width: 30rem;
+  text-align: center;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+.action-call a {
+  background-color: #c13405;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.action-call a:hover {
+  background-color: #b53104;
+}
+
+.events a {
+  color: #c13405;
+  font-weight: 700;
+}
+
+/* h-strip */
+.h-strip {
+  text-align: center;
+  font-size: 0.7rem;
+  color: black;
+  font-family: monospace;
+  position: absolute;
+  top: 0;
+  background-color: wheat;
+  width: 100%;
+}
+
+/* fixed link */
+.home-link,
+.home-link:visited {
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #f25749;
+}
+
+/* HEADER */
+header {
+  background-color: #062620;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  position: relative;
+}
+
+h1 span:hover,
+.link-char:hover {
+  position: relative;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+/* Basic styling for diff sections */
+article,
+.action-call,
+.testimonial,
+.events {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6rem;
+  gap: 3rem;
+}
+
+article:nth-of-type(odd),
+.testimonial {
+  background-color: #f2efdc;
+  flex-direction: row-reverse;
+}
+
+article:nth-of-type(even),
+.action-call,
+.events {
+  background-color: #f4c035;
+}
+
+/* EARTH IMG */
+.earth-img {
+  /* width: 500px; */
+  /* height: 500px; */
+  width: 31rem;
+  height: 31rem;
+}
+
+article:nth-of-type(odd) img,
+.testimonial img {
+  margin-left: -2rem;
+  margin-right: 0;
+}
+
+/* CIRCULAR TEXT */
+h2 {
+  font-family: monospace;
+  font-size: 4rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 4rem;
+  /* height: 500px; */
+  height: 31rem;
+  transform-origin: center;
+  /* width: 500px; */
+  width: 31rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 span {
+  position: absolute;
+  /* height: 500px; */
+  height: 31rem;
+  top: 0;
+  transform-origin: center;
+}
+
+article:nth-of-type(even) h2,
+.action-call h2,
+.events h2 {
+  left: auto;
+  right: 6rem;
+}
+
+article:hover h2,
+.action-call:hover h2,
+.testimonial:hover h2,
+.events:hover h2 {
+  animation-name: rotate-circle;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Styling Content */
+article ul {
+  text-align: left;
+  /* width: 300px; */
+  width: 20rem;
+}
+
+article:last-of-type div,
+.testimonial div,
+.action-call div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* why celebrate earth day sec */
+article:nth-of-type(2) p {
+  background-color: maroon;
+  color: white;
+  padding: 3rem;
+  max-width: 25rem;
+}
+
+article:nth-of-type(2) p::before {
+  background-color: wheat;
+  /* width: 150px; */
+  width: 10rem;
+  /* height: 20px; */
+  height: 1.2rem;
+  content: "";
+  display: block;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 1rem;
+  left: -2.5rem;
+  clip-path: polygon(
+    0% 0%,
+    100% 0,
+    91% 48%,
+    100% 100%,
+    48% 100%,
+    0 100%,
+    12% 49%
+  );
+}
+
+article:nth-of-type(2) p::after {
+  background-color: wheat;
+  /* width: 150px; */
+  width: 10rem;
+  /* height: 20px; */
+  height: 1.2rem;
+  content: "";
+  display: block;
+  position: absolute;
+  transform: rotate(-45deg);
+  bottom: 1.5rem;
+  right: -3rem;
+  clip-path: polygon(
+    0% 0%,
+    100% 0,
+    91% 48%,
+    100% 100%,
+    48% 100%,
+    0 100%,
+    12% 49%
+  );
+}
+
+/* TESTIMONIAL SECTION */
+.testimonial div {
+  height: 100%;
+  /* width: 500px; */
+  width: 31rem;
+  justify-content: center;
+}
+
+.testimonial p {
+  background-color: pink;
+  /* height: 240px; */
+  height: 15rem;
+  padding: 2.5rem;
+  position: absolute;
+  /* width: 450px; */
+  width: 27rem;
+  /* max-width: 500px; */
+  max-width: 30rem;
+}
+
+.testimonial p:last-of-type {
+  padding: 3.2rem 2.5rem;
+  opacity: 0;
+  animation: 10s rotateCardOpp ease-in infinite;
+  transform: rotateY(45deg);
+  transform: scaleX(-1);
+}
+
+.quote {
+  font-size: 2rem;
+  text-align: left;
+  line-height: 2.5rem;
+  text-align: center;
+  font-weight: 900;
+  background-color: pink;
+  opacity: 1;
+  animation: 10s rotateCard ease-in infinite;
+  transform: rotateY(0);
+}
+
+.quote span {
+  font-family: "Fraunces", serif;
+  text-transform: capitalize;
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  font-weight: 300;
+}
+
+.testimonial p::before {
+  content: open-quote;
+  color: red;
+  font-size: 16rem;
+  font-family: sans-serif;
+  position: absolute;
+  left: -4rem;
+  top: 3rem;
+  font-weight: 600;
+}
+
+.testimonial p::after {
+  content: close-quote;
+  color: red;
+  font-size: 16rem;
+  font-family: sans-serif;
+  position: absolute;
+  right: -4rem;
+  bottom: -4rem;
+  font-weight: 600;
+}
+
+.testimonial p:last-of-type::before {
+  right: -3rem;
+  left: auto;
+  content: "*";
+}
+
+.testimonial p:last-of-type::after {
+  right: auto;
+  left: -3rem;
+  content: "*";
+}
+
+/* FOOTER */
+footer {
+  background-color: #062620;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  position: static;
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 2px 0;
+}
+
+/* ANIMATIONS */
+@keyframes rotateCard {
+  from {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+  35% {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  75% {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(1);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateCardOpp {
+  from {
+    transform: rotateY(45deg);
+    opacity: 0;
+  }
+  35% {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  60% {
+    transform: rotateY(135deg);
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  85% {
+    transform: rotateY(270deg);
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    transform: rotateY(360deg);
+    transform: scaleX(-1);
+    opacity: 0;
+  }
+}
+
+/* ANIMATION CIRCULAR */
+@keyframes rotate-circle {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* RESPONSIVENESS */
+/* for large screens */
+@media screen and (min-width: 1300px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: 22px;
+  }
+  h1 {
+    max-width: 1800px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 2100px) {
+  html {
+    font-size: 29px;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  html {
+    font-size: 33px;
+  }
+  h1 {
+    max-width: 2000px;
+  }
+}
+
+/* for medium screens */
+@media screen and (max-width: 1180px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+/* for small screen */
+@media screen and (max-width: 700px) {
+  .mob {
+    display: block;
+  }
+
+  header, footer, section, .testimonial, .events, .home-link {
+    display: none;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: monospace;
+  }
+}
