@@ -261,11 +261,3 @@ document.body.insertAdjacentHTML(
   "beforeend",
   "<div class='mob'>This project doesn't have a mobile version!</div>"
 );
-
-document.head.insertAdjacentHTML("beforeend", 
-`<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Londrina+Solid:wght@100;300;400;900&family=Rubik+Moonrocks&display=swap"
-  rel="stylesheet"
-/>`)
