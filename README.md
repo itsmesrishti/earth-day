@@ -12,4 +12,4 @@ Your submission should be more fun and interactive than the HTML we provide, but
 
 <h2>Project Gallery</h2>
 ![screenshot](img1.png)
-
+![screenshot](img2.png)
