@@ -11,4 +11,5 @@ Your submission should be more fun and interactive than the HTML we provide, but
 <p>HTML, CSS, Vanilla JS</p>
 
 <h2>Project Gallery</h2>
-![screenshot](recipe-page.png)
+![screenshot](img1.png)
+
